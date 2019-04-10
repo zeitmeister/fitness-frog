@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using Treehouse.FitnessFrog.Data;
 using Treehouse.FitnessFrog.Models;
+using static Treehouse.FitnessFrog.Models.Entry;
 
 namespace Treehouse.FitnessFrog.Controllers
 {
@@ -43,11 +44,16 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             return View();
         }
-        [ActionName("Add"), HttpPost]
-        public ActionResult AddPost(Entry entry)
+        [HttpPost]
+        public ActionResult Add(string activityId, string date, string duration, string exclude, string intensity, string notes)
         {
-            _entriesRepository.AddEntry()
-            return Content($"hello {Date}");
+            ViewBag.Date = date;
+            ViewBag.ActivityId = activityId;
+            ViewBag.Duration = duration;
+            ViewBag.Intensity = intensity;
+            ViewBag.Exclude = exclude;
+            ViewBag.Notes = notes;
+            return View();
         }
 
         public ActionResult Edit(int? id)
