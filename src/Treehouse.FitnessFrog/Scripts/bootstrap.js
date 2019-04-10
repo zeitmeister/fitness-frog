@@ -1436,7 +1436,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
   Tooltip.prototype.toggle = function (e) {
     var self = e ? $(e.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type) : this
-    self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
+    self.tip().hasClass('in') ? self.leave(self) : self.riesrenter(self)
   }
 
   Tooltip.prototype.destroy = function () {
