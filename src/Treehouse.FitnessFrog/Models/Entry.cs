@@ -6,7 +6,8 @@ namespace Treehouse.FitnessFrog.Models
     /// <summary>
     /// Represents an activity that has been logged in the Fitness Frog app.
     /// </summary>
-    public class Entry
+    public class 
+        Entry
     {
         /// <summary>
         /// The intensity level of the activity.
