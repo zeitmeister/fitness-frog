@@ -44,7 +44,7 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             var entry = new Entry()
             {
-                Date = DateTime.Today
+                Date = DateTime.Today.
             };
 
             ViewBag.ActivitiesSelectListItems = new SelectList(
