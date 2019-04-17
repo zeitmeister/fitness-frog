@@ -6,14 +6,15 @@
 
 <h2>@ViewBag.Title</h2>
 
-@Html.ValidationSummary("The following errors were found:", new { @class = "alert alert-danger" })
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary("The following errors were found:", new { @class = "alert alert-danger" })
+
     <div class="row">
 
         <div class="col-md-6">
-      
+
             <div class="form-group">
                 @Html.LabelFor(m => m.Date, new { @class = "control-label" })
                 @Html.TextBoxFor(m => m.Date, "{0:d}", new { @class = "form-control datepicker" })
@@ -21,7 +22,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(m => m.ActivityId, new { @class = "control-label" })
-                @Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems, "",  new { @class = "form-control" })
+                @Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems, "", new { @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.ActivityId)
             </div>
 
@@ -40,7 +41,7 @@
                         @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.Medium) @Entry.IntensityLevel.Medium
                     </label>
                     <label class="radio-inline">
-                         @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.High) @Entry.IntensityLevel.High
+                        @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.High) @Entry.IntensityLevel.High
                     </label>
                 </div>
             </div>
